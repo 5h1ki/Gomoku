@@ -1,0 +1,10 @@
+^D:\SYSU\AAA软工初级实训\五子棋单机版\CMAKELISTS.TXT
+setlocal
+"D:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/SYSU/AAA软工初级实训/五子棋单机版 -BD:/SYSU/AAA软工初级实训/五子棋单机版/build --check-stamp-file D:/SYSU/AAA软工初级实训/五子棋单机版/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

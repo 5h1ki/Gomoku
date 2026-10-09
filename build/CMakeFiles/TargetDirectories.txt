@@ -1,0 +1,3 @@
+D:/SYSU/AAA软工初级实训/五子棋单机版/build/CMakeFiles/ege-demo.dir
+D:/SYSU/AAA软工初级实训/五子棋单机版/build/CMakeFiles/ALL_BUILD.dir
+D:/SYSU/AAA软工初级实训/五子棋单机版/build/CMakeFiles/ZERO_CHECK.dir
