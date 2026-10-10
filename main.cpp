@@ -131,6 +131,24 @@ void drawBorder(int gap)
     ege_fillrect(WIDTH, 25, 1, HEIGHT - 50);
 }
 
+void drawToken(int gap, int grid[][15], int cnt)
+{
+    for (int i = 0; i < 15; i++)
+    {
+        for (int j = 0; j < 15; j++)
+        {
+            if (grid[i][j] == 0)
+                continue;
+            if (grid[i][j] == 1)
+                setfillcolor(BLACK);
+            else if (grid[i][j] == 2)
+                setfillcolor(WHITE);
+            ege_fillcircle(PADDING + j * gap, PADDING + i * gap, gap / 2 - 10);
+        }
+    }
+    drawTriangle(gap, cnt);
+}
+
 void drawEntry(int gap, int font_height, int count[])
 {
     drawGrid(gap);
@@ -159,150 +177,14 @@ void drawEntry(int gap, int font_height, int count[])
     line(WIDTH / 2 - 60, 325, WIDTH / 2 + 60, 325);
 }
 
-void drawToken(int gap, int grid[][15], int cnt)
+void drawBoard(int gap, int font_height, int count[], int cnt)
 {
-    for (int i = 0; i < 15; i++)
-    {
-        for (int j = 0; j < 15; j++)
-        {
-            if (grid[i][j] == 0)
-                continue;
-            if (grid[i][j] == 1)
-                setfillcolor(BLACK);
-            else if (grid[i][j] == 2)
-                setfillcolor(WHITE);
-            ege_fillcircle(PADDING + j * gap, PADDING + i * gap, gap / 2 - 10);
-        }
-    }
+    setfillcolor(EGERGB(222, 184, 135));
+    ege_fillrect(0, 0, WIDTH, HEIGHT);
+    drawGrid(gap);
+    drawRecord(gap, font_height, count);
+    drawBorder(gap);
     drawTriangle(gap, cnt);
-}
-
-void gameOver(bool &game_over, int &winner, int grid[][15], int cnt)
-{
-    for (int i = 0; i < 15; i++)
-    {
-        for (int j = 0; j + 4 < 15; j++)
-        {
-            if (grid[i][j] == 1 && grid[i][j + 1] == 1 && grid[i][j + 2] == 1 && grid[i][j + 3] == 1 && grid[i][j + 4] == 1)
-            {
-                game_over = true;
-                winner = 1;
-                return;
-            }
-            else if (grid[i][j] == 2 && grid[i][j + 1] == 2 && grid[i][j + 2] == 2 && grid[i][j + 3] == 2 && grid[i][j + 4] == 2)
-            {
-                game_over = true;
-                winner = 2;
-                return;
-            }
-        }
-    }
-    for (int i = 0; i + 4 < 15; i++)
-    {
-        for (int j = 0; j < 15; j++)
-        {
-            if (grid[i][j] == 1 && grid[i + 1][j] == 1 && grid[i + 2][j] == 1 && grid[i + 3][j] == 1 && grid[i + 4][j] == 1)
-            {
-                game_over = true;
-                winner = 1;
-                return;
-            }
-            else if (grid[i][j] == 2 && grid[i + 1][j] == 2 && grid[i + 2][j] == 2 && grid[i + 3][j] == 2 && grid[i + 4][j] == 2)
-            {
-                game_over = true;
-                winner = 2;
-                return;
-            }
-        }
-    }
-    for (int i = 0; i < 15; i++)
-    {
-        for (int j = 0; j < 15; j++)
-        {
-            if (i + 4 < 15 && j + 4 < 15)
-            {
-                if (grid[i][j] == 1 && grid[i + 1][j + 1] == 1 && grid[i + 2][j + 2] == 1 && grid[i + 3][j + 3] == 1 && grid[i + 4][j + 4] == 1)
-                {
-                    game_over = true;
-                    winner = 1;
-                    return;
-                }
-                else if (grid[i][j] == 2 && grid[i + 1][j + 1] == 2 && grid[i + 2][j + 2] == 2 && grid[i + 3][j + 3] == 2 && grid[i + 4][j + 4] == 2)
-                {
-                    game_over = true;
-                    winner = 2;
-                    return;
-                }
-            }
-            if (i + 4 < 15 && j - 4 >= 0)
-            {
-                if (grid[i][j] == 1 && grid[i + 1][j - 1] == 1 && grid[i + 2][j - 2] == 1 && grid[i + 3][j - 3] == 1 && grid[i + 4][j - 4] == 1)
-                {
-                    game_over = true;
-                    winner = 1;
-                    return;
-                }
-                else if (grid[i][j] == 2 && grid[i + 1][j - 1] == 2 && grid[i + 2][j - 2] == 2 && grid[i + 3][j - 3] == 2 && grid[i + 4][j - 4] == 2)
-                {
-                    game_over = true;
-                    winner = 2;
-                    return;
-                }
-            }
-        }
-    }
-
-    if (cnt == 225 && !game_over)
-        game_over = true;
-}
-
-bool isGameOver(int grid[][15], int cnt)
-{
-    for (int i = 0; i < 15; i++)
-    {
-        for (int j = 0; j + 4 < 15; j++)
-        {
-            if (grid[i][j] == 1 && grid[i][j + 1] == 1 && grid[i][j + 2] == 1 && grid[i][j + 3] == 1 && grid[i][j + 4] == 1)
-                return true;
-            else if (grid[i][j] == 2 && grid[i][j + 1] == 2 && grid[i][j + 2] == 2 && grid[i][j + 3] == 2 && grid[i][j + 4] == 2)
-                return true;
-        }
-    }
-    for (int i = 0; i + 4 < 15; i++)
-    {
-        for (int j = 0; j < 15; j++)
-        {
-            if (grid[i][j] == 1 && grid[i + 1][j] == 1 && grid[i + 2][j] == 1 && grid[i + 3][j] == 1 && grid[i + 4][j] == 1)
-                return true;
-            else if (grid[i][j] == 2 && grid[i + 1][j] == 2 && grid[i + 2][j] == 2 && grid[i + 3][j] == 2 && grid[i + 4][j] == 2)
-                return true;
-        }
-    }
-    for (int i = 0; i < 15; i++)
-    {
-        for (int j = 0; j < 15; j++)
-        {
-            if (i + 4 < 15 && j + 4 < 15)
-            {
-                if (grid[i][j] == 1 && grid[i + 1][j + 1] == 1 && grid[i + 2][j + 2] == 1 && grid[i + 3][j + 3] == 1 && grid[i + 4][j + 4] == 1)
-                    return true;
-                else if (grid[i][j] == 2 && grid[i + 1][j + 1] == 2 && grid[i + 2][j + 2] == 2 && grid[i + 3][j + 3] == 2 && grid[i + 4][j + 4] == 2)
-                    return true;
-            }
-            if (i + 4 < 15 && j - 4 >= 0)
-            {
-                if (grid[i][j] == 1 && grid[i + 1][j - 1] == 1 && grid[i + 2][j - 2] == 1 && grid[i + 3][j - 3] == 1 && grid[i + 4][j - 4] == 1)
-                    return true;
-                else if (grid[i][j] == 2 && grid[i + 1][j - 1] == 2 && grid[i + 2][j - 2] == 2 && grid[i + 3][j - 3] == 2 && grid[i + 4][j - 4] == 2)
-                    return true;
-            }
-        }
-    }
-
-    if (cnt == 225)
-        return true;
-
-    return false;
 }
 
 void drawCard(int count[], int winner)
@@ -346,6 +228,132 @@ void drawCard(int count[], int winner)
     xyprintf(WIDTH / 2, 300, "点击屏幕任意处继续...");
 }
 
+bool gameOver(bool &game_over, int &winner, int grid[][15], int cnt)
+{
+    for (int i = 0; i < 15; i++)
+    {
+        for (int j = 0; j + 4 < 15; j++)
+        {
+            if (grid[i][j] == 1 && grid[i][j + 1] == 1 && grid[i][j + 2] == 1 && grid[i][j + 3] == 1 && grid[i][j + 4] == 1)
+            {
+                game_over = true;
+                winner = 1;
+                return true;
+            }
+            else if (grid[i][j] == 2 && grid[i][j + 1] == 2 && grid[i][j + 2] == 2 && grid[i][j + 3] == 2 && grid[i][j + 4] == 2)
+            {
+                game_over = true;
+                winner = 2;
+                return true;
+            }
+        }
+    }
+    for (int i = 0; i + 4 < 15; i++)
+    {
+        for (int j = 0; j < 15; j++)
+        {
+            if (grid[i][j] == 1 && grid[i + 1][j] == 1 && grid[i + 2][j] == 1 && grid[i + 3][j] == 1 && grid[i + 4][j] == 1)
+            {
+                game_over = true;
+                winner = 1;
+                return true;
+            }
+            else if (grid[i][j] == 2 && grid[i + 1][j] == 2 && grid[i + 2][j] == 2 && grid[i + 3][j] == 2 && grid[i + 4][j] == 2)
+            {
+                game_over = true;
+                winner = 2;
+                return true;
+            }
+        }
+    }
+    for (int i = 0; i < 15; i++)
+    {
+        for (int j = 0; j < 15; j++)
+        {
+            if (i + 4 < 15 && j + 4 < 15)
+            {
+                if (grid[i][j] == 1 && grid[i + 1][j + 1] == 1 && grid[i + 2][j + 2] == 1 && grid[i + 3][j + 3] == 1 && grid[i + 4][j + 4] == 1)
+                {
+                    game_over = true;
+                    winner = 1;
+                    return true;
+                }
+                else if (grid[i][j] == 2 && grid[i + 1][j + 1] == 2 && grid[i + 2][j + 2] == 2 && grid[i + 3][j + 3] == 2 && grid[i + 4][j + 4] == 2)
+                {
+                    game_over = true;
+                    winner = 2;
+                    return true;
+                }
+            }
+            if (i + 4 < 15 && j - 4 >= 0)
+            {
+                if (grid[i][j] == 1 && grid[i + 1][j - 1] == 1 && grid[i + 2][j - 2] == 1 && grid[i + 3][j - 3] == 1 && grid[i + 4][j - 4] == 1)
+                {
+                    game_over = true;
+                    winner = 1;
+                    return true;
+                }
+                else if (grid[i][j] == 2 && grid[i + 1][j - 1] == 2 && grid[i + 2][j - 2] == 2 && grid[i + 3][j - 3] == 2 && grid[i + 4][j - 4] == 2)
+                {
+                    game_over = true;
+                    winner = 2;
+                    return true;
+                }
+            }
+        }
+    }
+    if (cnt == 225 && !game_over)
+    {
+        game_over = true;
+        return true;
+    }
+
+    return false;
+}
+
+void saveGame(int grid[][15], Position memory[], int count[], int cnt)
+{
+    ofstream ofs1("grid_data.txt");
+    ofstream ofs2("memory_data.txt");
+    ofstream ofs3("count_data.txt");
+    ofs1 << cnt << '\n';
+    for (int i = 0; i < 15; i++)
+    {
+        for (int j = 0; j < 15; j++)
+            ofs1 << grid[i][j] << ' ';
+        ofs1 << '\n';
+    }
+    for (int i = 0; i < 225; i++)
+        ofs2 << memory[i].x << ' ' << memory[i].y << '\n';
+    for (int i = 0; i < 3; i++)
+        ofs3 << count[i] << ' ';
+
+    ofs1.close();
+    ofs2.close();
+    ofs3.close();
+}
+
+void loadGame(int grid[][15], Position memory[], int count[], int &cnt)
+{
+    ifstream ifs1("grid_data.txt");
+    ifstream ifs2("memory_data.txt");
+    ifstream ifs3("count_data.txt");
+    ifs1 >> cnt;
+    for (int i = 0; i < 15; i++)
+    {
+        for (int j = 0; j < 15; j++)
+            ifs1 >> grid[i][j];
+    }
+    for (int i = 0; i < 225; i++)
+        ifs2 >> memory[i].x >> memory[i].y;
+    for (int i = 0; i < 3; i++)
+        ifs3 >> count[i];
+
+    ifs1.close();
+    ifs2.close();
+    ifs3.close();
+}
+
 int main()
 {
     drawInitialScreen();
@@ -365,7 +373,7 @@ int main()
 
     drawEntry(gap, font_height, count);
 
-    //选择继续游戏或是新游戏
+    // 选择继续游戏或是新游戏
     bool game_start = false;
     for (; is_run() && !game_start; delay_fps(60))
     {
@@ -378,47 +386,12 @@ int main()
                 int y = msg.y;
                 if (x >= WIDTH / 2 - 80 && x <= WIDTH / 2 + 80 && y >= 160 && y <= 225)
                 {
-                    ifstream ifs1("grid_data.txt");
-                    ifstream ifs2("memory_data.txt");
-                    ifstream ifs3("count_data.txt");
-                    ifs1 >> cnt;
-                    for (int i = 0; i < 15; i++)
-                    {
-                        for (int j = 0; j < 15; j++)
-                            ifs1 >> grid[i][j];
-                    }
-                    for (int i = 0; i < 225; i++)
-                        ifs2 >> memory[i].x >> memory[i].y;
-                    for (int i = 0; i < 3; i++)
-                        ifs3 >> count[i];
-
-                    ifs1.close();
-                    ifs2.close();
-                    ifs3.close();
-
+                    loadGame(grid, memory, count, cnt);
                     game_start = true;
                 }
                 else if (x >= WIDTH / 2 - 60 && x <= WIDTH / 2 + 60 && y >= 260 && y <= 325)
                 {
-                    ofstream ofs1("grid_data.txt");
-                    ofstream ofs2("memory_data.txt");
-                    ofstream ofs3("count_data.txt");
-                    ofs1 << 0 << '\n';
-                    for (int i = 0; i < 15; i++)
-                    {
-                        for (int j = 0; j < 15; j++)
-                            ofs1 << 0 << ' ';
-                        ofs1 << '\n';
-                    }
-                    for (int i = 0; i < 225; i++)
-                        ofs2 << -1 << ' ' << -1 << '\n';
-                    for (int i = 0; i < 3; i++)
-                        ofs3 << 0 << ' ';
-
-                    ofs1.close();
-                    ofs2.close();
-                    ofs3.close();
-
+                    saveGame(grid, memory, count, cnt);
                     game_start = true;
                 }
             }
@@ -428,11 +401,7 @@ int main()
     while (is_run())
     {
         // 每局开始或者复盘结束
-        setfillcolor(EGERGB(222, 184, 135));
-        ege_fillrect(0, 0, WIDTH, HEIGHT);
-        drawGrid(gap);
-        drawRecord(gap, font_height, count);
-        drawBorder(gap);
+        drawBoard(gap, font_height, count, cnt);
         drawToken(gap, grid, cnt);
 
         bool game_over = false;
@@ -442,12 +411,9 @@ int main()
         // 开始下棋
         for (; is_run() && !game_over; delay_fps(60))
         {
-            //存盘若是终局，则break
-            if(isGameOver(grid, cnt))
-            {
-                gameOver(game_over, winner, grid, cnt);
+            // 存盘若是终局，则break
+            if (gameOver(game_over, winner, grid, cnt))
                 break;
-            }
 
             int pos_x = 0, pos_y = 0;
             bool is_click = false, is_found = false;
@@ -490,24 +456,7 @@ int main()
             // 存盘
             if (is_store)
             {
-                ofstream ofs1("grid_data.txt");
-                ofstream ofs2("memory_data.txt");
-                ofstream ofs3("count_data.txt");
-                ofs1 << cnt << '\n';
-                for (int i = 0; i < 15; i++)
-                {
-                    for (int j = 0; j < 15; j++)
-                        ofs1 << grid[i][j] << ' ';
-                    ofs1 << '\n';
-                }
-                for (int i = 0; i < 225; i++)
-                    ofs2 << memory[i].x << ' ' << memory[i].y << '\n';
-                for (int i = 0; i < 3; i++)
-                    ofs3 << count[i] << ' ';
-
-                ofs1.close();
-                ofs2.close();
-                ofs3.close();
+                saveGame(grid, memory, count, cnt);
                 break;
             }
             // 复盘break
@@ -542,16 +491,11 @@ int main()
         // 复盘
         if (is_review)
         {
-            setfillcolor(EGERGB(222, 184, 135));
-            ege_fillrect(0, 0, WIDTH, HEIGHT);
-            drawGrid(gap);
-            drawRecord(gap, font_height, count);
-            drawBorder(gap);
-
+            drawBoard(gap, font_height, count, 0);
             int cnt_tmp = 0;
+
             for (; is_run() && cnt_tmp < cnt; delay_fps(60))
             {
-                drawTriangle(gap, cnt_tmp);
                 while (mousemsg())
                 {
                     mouse_msg msg = getmouse();
@@ -567,6 +511,7 @@ int main()
                         cnt_tmp++;
                     }
                 }
+                drawTriangle(gap, cnt_tmp);
             }
             continue;
         }
@@ -580,11 +525,7 @@ int main()
             mouse_msg msg = getmouse();
             if (msg.is_left() && msg.is_down())
             {
-                setfillcolor(EGERGB(222, 184, 135));
-                ege_fillrect(0, 0, WIDTH, HEIGHT);
-                drawGrid(gap);
-                drawRecord(gap, font_height, count);
-                drawBorder(gap);
+                drawBoard(gap, font_height, count, cnt);
                 drawToken(gap, grid, cnt);
                 break;
             }
@@ -614,37 +555,15 @@ int main()
         // 存盘
         if (is_store)
         {
-            ofstream ofs1("grid_data.txt");
-            ofstream ofs2("memory_data.txt");
-            ofstream ofs3("count_data.txt");
-            ofs1 << cnt << '\n';
-            for (int i = 0; i < 15; i++)
-            {
-                for (int j = 0; j < 15; j++)
-                    ofs1 << grid[i][j] << ' ';
-                ofs1 << '\n';
-            }
-            for (int i = 0; i < 225; i++)
-                ofs2 << memory[i].x << ' ' << memory[i].y << '\n';
-            for (int i = 0; i < 3; i++)
-                ofs3 << count[i] << ' ';
-
-            ofs1.close();
-            ofs2.close();
-            ofs3.close();
+            saveGame(grid, memory, count, cnt);
             break;
         }
         // 复盘
         if (is_review)
         {
-            setfillcolor(EGERGB(222, 184, 135));
-            ege_fillrect(0, 0, WIDTH, HEIGHT);
-            drawGrid(gap);
-            drawRecord(gap, font_height, count);
-            drawBorder(gap);
-            drawTriangle(gap, 0);
-
+            drawBoard(gap, font_height, count, 0);
             int cnt_tmp = 0;
+
             for (; is_run() && cnt_tmp < cnt; delay_fps(60))
             {
                 while (mousemsg())
@@ -686,24 +605,7 @@ int main()
                     // 复盘后存盘
                     if (is_store)
                     {
-                        ofstream ofs1("grid_data.txt");
-                        ofstream ofs2("memory_data.txt");
-                        ofstream ofs3("count_data.txt");
-                        ofs1 << cnt << '\n';
-                        for (int i = 0; i < 15; i++)
-                        {
-                            for (int j = 0; j < 15; j++)
-                                ofs1 << grid[i][j] << ' ';
-                            ofs1 << '\n';
-                        }
-                        for (int i = 0; i < 225; i++)
-                            ofs2 << memory[i].x << ' ' << memory[i].y << '\n';
-                        for (int i = 0; i < 3; i++)
-                            ofs3 << count[i] << ' ';
-
-                        ofs1.close();
-                        ofs2.close();
-                        ofs3.close();
+                        saveGame(grid, memory, count, cnt);
                         break;
                     }
                 }

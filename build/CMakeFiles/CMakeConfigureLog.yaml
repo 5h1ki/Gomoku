@@ -118,9 +118,9 @@ events:
       The output was:
       0
       适用于 .NET Framework MSBuild 版本 18.7.1+024f5b037
-      生成启动时间为 2026/9/28 19:37:32。
+      生成启动时间为 2026/10/10 10:30:39。
       
-      节点 1 上的项目“D:\\SYSU\\AAA软工初级实训\\五子棋单机版\\build\\CMakeFiles\\4.3.1-msvc1\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)。
+      节点 1 上的项目“D:\\SYSU\\AAA软工初级实训\\五子棋\\build\\CMakeFiles\\4.3.1-msvc1\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)。
       PrepareForBuild:
         正在创建目录“Debug\\”。
         已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
@@ -133,7 +133,7 @@ events:
         CMakeCXXCompilerId.cpp
       Link:
         d:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
-        CompilerIdCXX.vcxproj -> D:\\SYSU\\AAA软工初级实训\\五子棋单机版\\build\\CMakeFiles\\4.3.1-msvc1\\CompilerIdCXX\\CompilerIdCXX.exe
+        CompilerIdCXX.vcxproj -> D:\\SYSU\\AAA软工初级实训\\五子棋\\build\\CMakeFiles\\4.3.1-msvc1\\CompilerIdCXX\\CompilerIdCXX.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
@@ -141,13 +141,13 @@ events:
       FinalizeBuildStatus:
         正在删除文件“Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild”。
         正在对“Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate”执行 Touch 任务。
-      已完成生成项目“D:\\SYSU\\AAA软工初级实训\\五子棋单机版\\build\\CMakeFiles\\4.3.1-msvc1\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)的操作。
+      已完成生成项目“D:\\SYSU\\AAA软工初级实训\\五子棋\\build\\CMakeFiles\\4.3.1-msvc1\\CompilerIdCXX\\CompilerIdCXX.vcxproj”(默认目标)的操作。
       
       已成功生成。
           0 个警告
           0 个错误
       
-      已用时间 00:00:00.86
+      已用时间 00:00:02.69
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -155,7 +155,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
       
       The CXX compiler identification is MSVC, found in:
-        D:/SYSU/AAA软工初级实训/五子棋单机版/build/CMakeFiles/4.3.1-msvc1/CompilerIdCXX/CompilerIdCXX.exe
+        D:/SYSU/AAA软工初级实训/五子棋/build/CMakeFiles/4.3.1-msvc1/CompilerIdCXX/CompilerIdCXX.exe
       
   -
     kind: "find-v1"
@@ -1060,8 +1060,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb\u5355\u673a\u7248/build/CMakeFiles/CMakeScratch/TryCompile-ayol7q"
-      binary: "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb\u5355\u673a\u7248/build/CMakeFiles/CMakeScratch/TryCompile-ayol7q"
+      source: "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb/build/CMakeFiles/CMakeScratch/TryCompile-6gvi6r"
+      binary: "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb/build/CMakeFiles/CMakeScratch/TryCompile-6gvi6r"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -1072,39 +1072,39 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/SYSU/AAA软工初级实训/五子棋单机版/build/CMakeFiles/CMakeScratch/TryCompile-ayol7q'
+        Change Dir: 'D:/SYSU/AAA软工初级实训/五子棋/build/CMakeFiles/CMakeScratch/TryCompile-6gvi6r'
         
-        Run Build Command(s): "d:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c88fa.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "d:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_9434b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         适用于 .NET Framework MSBuild 版本 18.7.1+024f5b037
-        生成启动时间为 2026/9/28 19:37:34。
+        生成启动时间为 2026/10/10 10:30:42。
         
-        节点 1 上的项目“D:\\SYSU\\AAA软工初级实训\\五子棋单机版\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ayol7q\\cmTC_c88fa.vcxproj”(默认目标)。
+        节点 1 上的项目“D:\\SYSU\\AAA软工初级实训\\五子棋\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6gvi6r\\cmTC_9434b.vcxproj”(默认目标)。
         PrepareForBuild:
           已启用结构化输出。编译器诊断的格式设置将反映错误层次结构。有关详细信息，请参阅 https://aka.ms/cpp/structured-output。
-          正在创建目录“D:\\SYSU\\AAA软工初级实训\\五子棋单机版\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ayol7q\\Debug\\”。
-          正在创建目录“cmTC_c88fa.dir\\Debug\\cmTC_c88fa.tlog\\”。
+          正在创建目录“D:\\SYSU\\AAA软工初级实训\\五子棋\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6gvi6r\\Debug\\”。
+          正在创建目录“cmTC_9434b.dir\\Debug\\cmTC_9434b.tlog\\”。
         InitializeBuildStatus:
-          正在创建“cmTC_c88fa.dir\\Debug\\cmTC_c88fa.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
-          正在对“cmTC_c88fa.dir\\Debug\\cmTC_c88fa.tlog\\unsuccessfulbuild”执行 Touch 任务。
+          正在创建“cmTC_9434b.dir\\Debug\\cmTC_9434b.tlog\\unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+          正在对“cmTC_9434b.dir\\Debug\\cmTC_9434b.tlog\\unsuccessfulbuild”执行 Touch 任务。
         ClCompile:
-          d:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_c88fa.dir\\Debug\\\\" /Fd"cmTC_c88fa.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "D:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          d:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_9434b.dir\\Debug\\\\" /Fd"cmTC_9434b.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "D:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36247 for x64
           版权所有(C) Microsoft Corporation。保留所有权利。
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_c88fa.dir\\Debug\\\\" /Fd"cmTC_c88fa.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "D:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_9434b.dir\\Debug\\\\" /Fd"cmTC_9434b.dir\\Debug\\vc145.pdb" /external:W3 /TP /errorReport:queue "D:\\Program Files\\Microsoft Visual Studio\\18\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          d:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\SYSU\\AAA软工初级实训\\五子棋单机版\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ayol7q\\Debug\\cmTC_c88fa.exe" /INCREMENTAL /ILK:"cmTC_c88fa.dir\\Debug\\cmTC_c88fa.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/SYSU/AAA软工初级实训/五子棋单机版/build/CMakeFiles/CMakeScratch/TryCompile-ayol7q/Debug/cmTC_c88fa.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/SYSU/AAA软工初级实训/五子棋单机版/build/CMakeFiles/CMakeScratch/TryCompile-ayol7q/Debug/cmTC_c88fa.lib" /MACHINE:X64  /machine:x64 cmTC_c88fa.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_c88fa.vcxproj -> D:\\SYSU\\AAA软工初级实训\\五子棋单机版\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ayol7q\\Debug\\cmTC_c88fa.exe
+          d:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\SYSU\\AAA软工初级实训\\五子棋\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6gvi6r\\Debug\\cmTC_9434b.exe" /INCREMENTAL /ILK:"cmTC_9434b.dir\\Debug\\cmTC_9434b.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/SYSU/AAA软工初级实训/五子棋/build/CMakeFiles/CMakeScratch/TryCompile-6gvi6r/Debug/cmTC_9434b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/SYSU/AAA软工初级实训/五子棋/build/CMakeFiles/CMakeScratch/TryCompile-6gvi6r/Debug/cmTC_9434b.lib" /MACHINE:X64  /machine:x64 cmTC_9434b.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_9434b.vcxproj -> D:\\SYSU\\AAA软工初级实训\\五子棋\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6gvi6r\\Debug\\cmTC_9434b.exe
         FinalizeBuildStatus:
-          正在删除文件“cmTC_c88fa.dir\\Debug\\cmTC_c88fa.tlog\\unsuccessfulbuild”。
-          正在对“cmTC_c88fa.dir\\Debug\\cmTC_c88fa.tlog\\cmTC_c88fa.lastbuildstate”执行 Touch 任务。
-        已完成生成项目“D:\\SYSU\\AAA软工初级实训\\五子棋单机版\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ayol7q\\cmTC_c88fa.vcxproj”(默认目标)的操作。
+          正在删除文件“cmTC_9434b.dir\\Debug\\cmTC_9434b.tlog\\unsuccessfulbuild”。
+          正在对“cmTC_9434b.dir\\Debug\\cmTC_9434b.tlog\\cmTC_9434b.lastbuildstate”执行 Touch 任务。
+        已完成生成项目“D:\\SYSU\\AAA软工初级实训\\五子棋\\build\\CMakeFiles\\CMakeScratch\\TryCompile-6gvi6r\\cmTC_9434b.vcxproj”(默认目标)的操作。
         
         已成功生成。
             0 个警告
             0 个错误
         
-        已用时间 00:00:00.85
+        已用时间 00:00:00.83
         
       exitCode: 0
   -

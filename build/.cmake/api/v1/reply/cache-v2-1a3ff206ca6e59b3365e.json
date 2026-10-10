@@ -27,7 +27,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb\u5355\u673a\u7248/build"
+			"value" : "d:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -359,7 +359,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb\u5355\u673a\u7248/build/CMakeFiles/pkgRedirects"
+			"value" : "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_FIND_ROOT_PATH_MODE_INCLUDE",
@@ -455,7 +455,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb\u5355\u673a\u7248"
+			"value" : "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1051,7 +1051,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb\u5355\u673a\u7248/build"
+			"value" : "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb/build"
 		},
 		{
 			"name" : "ege-demo_IS_TOP_LEVEL",
@@ -1075,7 +1075,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb\u5355\u673a\u7248"
+			"value" : "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb"
 		}
 	],
 	"kind" : "cache",

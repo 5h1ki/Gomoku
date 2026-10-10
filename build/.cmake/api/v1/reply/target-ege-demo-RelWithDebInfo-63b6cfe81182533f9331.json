@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "MinSizeRel/ege-demo.exe"
+			"path" : "RelWithDebInfo/ege-demo.exe"
 		},
 		{
-			"path" : "MinSizeRel/ege-demo.pdb"
+			"path" : "RelWithDebInfo/ege-demo.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -64,7 +64,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG"
 				},
 				{
 					"backtrace" : 3,
@@ -103,7 +103,7 @@
 			[
 				{
 					"backtrace" : 4,
-					"path" : "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb\u5355\u673a\u7248/ege/include"
+					"path" : "D:/SYSU/AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad/\u4e94\u5b50\u68cb/ege/include"
 				}
 			],
 			"language" : "CXX",
@@ -125,11 +125,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /INCREMENTAL:NO",
+				"fragment" : "/machine:x64 /debug /INCREMENTAL",
 				"role" : "flags"
 			},
 			{
@@ -138,7 +138,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-LIBPATH:D:\\SYSU\\AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad\\\u4e94\u5b50\u68cb\u5355\u673a\u7248\\ege\\lib\\vs2026\\x64",
+				"fragment" : "-LIBPATH:D:\\SYSU\\AAA\u8f6f\u5de5\u521d\u7ea7\u5b9e\u8bad\\\u4e94\u5b50\u68cb\\ege\\lib\\vs2026\\x64",
 				"role" : "libraryPath"
 			},
 			{

@@ -1,6 +1,6 @@
-^D:\SYSU\AAA软工初级实训\五子棋单机版\BUILD\CMAKEFILES\E095E54351BDE8405E9EFA5D24F112A2\GENERATE.STAMP.RULE
+^D:\SYSU\AAA软工初级实训\五子棋\BUILD\CMAKEFILES\66F2EFBA4AE13939063C6DE22FD7EE38\GENERATE.STAMP.RULE
 setlocal
-"D:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/SYSU/AAA软工初级实训/五子棋单机版 -BD:/SYSU/AAA软工初级实训/五子棋单机版/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/SYSU/AAA软工初级实训/五子棋单机版/build/ege-demo.slnx
+"D:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/SYSU/AAA软工初级实训/五子棋 -BD:/SYSU/AAA软工初级实训/五子棋/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/SYSU/AAA软工初级实训/五子棋/build/ege-demo.slnx
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="18.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="D:\SYSU\AAA软工初级实训\五子棋单机版\build\CMakeFiles\e095e54351bde8405e9efa5d24f112a2\generate.stamp.rule">
+    <CustomBuild Include="D:\SYSU\AAA软工初级实训\五子棋\build\CMakeFiles\66f2efba4ae13939063c6de22fd7ee38\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{F05EBE30-CB52-3A20-A2EC-C8B8E8268852}</UniqueIdentifier>
+      <UniqueIdentifier>{4F41150C-AD77-3E75-BCBC-0404194719A0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
